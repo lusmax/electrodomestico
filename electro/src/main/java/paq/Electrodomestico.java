@@ -48,4 +48,30 @@ public abstract class Electrodomestico {
         this.consumoEnergetico = consumoEnergetico;
         this.peso = peso;
     }
+    //Getters
+
+    public float getPrecioBase() {
+        return precioBase;
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    public char getConsumoEnergetico() {
+        return consumoEnergetico;
+    }
+
+    public float getPeso() {
+        return peso;
+    }
+
+    public char[] getAvailableConsumptionEnergy() {
+        return availableConsumptionEnergy;
+    }
+
+    public String[] getAvailableColor() {
+        return availableColor;
+    }
+
+}
