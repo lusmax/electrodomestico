@@ -15,9 +15,13 @@ public abstract class Electrodomestico {
     protected char consumoEnergetico;
     protected float peso;
 
+    // Default values 
     public static final float DEFAULT_PRECIO = 100;
     public static final String DEFAULT_COLOR = "blanco";
     public static final char DEFAULT_CONSUMO_ENERGETICO = 'F';
     public static final float DEFAULT_PESO = 5;
+
+    // Available Energy Consumption
+    protected char[] availableConsumptionEnergy = {'A', 'B', 'C', 'D', 'E', 'F'};
 
 }
