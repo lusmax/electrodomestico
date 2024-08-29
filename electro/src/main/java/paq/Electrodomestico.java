@@ -8,6 +8,16 @@ package paq;
  *
  * @author luisa
  */
-public class Electrodomestico {
-    
+public abstract class Electrodomestico {
+
+    protected float precioBase;
+    protected String color;
+    protected char consumoEnergetico;
+    protected float peso;
+
+    public static final float DEFAULT_PRECIO = 100;
+    public static final String DEFAULT_COLOR = "blanco";
+    public static final char DEFAULT_CONSUMO_ENERGETICO = 'F';
+    public static final float DEFAULT_PESO = 5;
+
 }
