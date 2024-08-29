@@ -24,4 +24,28 @@ public abstract class Electrodomestico {
     // Available Energy Consumption
     protected char[] availableConsumptionEnergy = {'A', 'B', 'C', 'D', 'E', 'F'};
 
-}
+    //Available Colors
+    protected String[] availableColor = {"blanco", "negro", "rojo", "azul", "gris"};
+
+//Constructores
+    public Electrodomestico() {
+        this.precioBase = this.DEFAULT_PRECIO;
+        this.color = this.DEFAULT_COLOR;
+        this.consumoEnergetico = this.DEFAULT_CONSUMO_ENERGETICO;
+        this.peso = this.DEFAULT_PESO;
+    }
+
+    public Electrodomestico(float precioBase, float peso) {
+        this.precioBase = precioBase;
+        this.peso = peso;
+        this.color = this.DEFAULT_COLOR;
+        this.consumoEnergetico = this.DEFAULT_CONSUMO_ENERGETICO;
+    }
+
+    public Electrodomestico(float precioBase, String color, char consumoEnergetico, float peso) {
+        this.precioBase = precioBase;
+        this.color = color;
+        this.consumoEnergetico = consumoEnergetico;
+        this.peso = peso;
+    }
+    }
