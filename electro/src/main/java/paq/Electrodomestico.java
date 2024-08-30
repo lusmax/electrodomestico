@@ -29,17 +29,17 @@ public abstract class Electrodomestico {
 
 //Constructores
     public Electrodomestico() {
-        this.precioBase = this.DEFAULT_PRECIO;
-        this.color = this.DEFAULT_COLOR;
-        this.consumoEnergetico = this.DEFAULT_CONSUMO_ENERGETICO;
-        this.peso = this.DEFAULT_PESO;
+        this.precioBase = Electrodomestico.DEFAULT_PRECIO;
+        this.color = Electrodomestico.DEFAULT_COLOR;
+        this.consumoEnergetico = Electrodomestico.DEFAULT_CONSUMO_ENERGETICO;
+        this.peso = Electrodomestico.DEFAULT_PESO;
     }
 
     public Electrodomestico(float precioBase, float peso) {
         this.precioBase = precioBase;
         this.peso = peso;
-        this.color = this.DEFAULT_COLOR;
-        this.consumoEnergetico = this.DEFAULT_CONSUMO_ENERGETICO;
+        this.color = Electrodomestico.DEFAULT_COLOR;
+        this.consumoEnergetico = Electrodomestico.DEFAULT_CONSUMO_ENERGETICO;
     }
 
     public Electrodomestico(float precioBase, String color, char consumoEnergetico, float peso) {
@@ -86,7 +86,7 @@ public abstract class Electrodomestico {
        }
        
        if(index < 0) {
-           resultado = this.DEFAULT_CONSUMO_ENERGETICO;
+           resultado = Electrodomestico.DEFAULT_CONSUMO_ENERGETICO;
        }
        return resultado;
     }
