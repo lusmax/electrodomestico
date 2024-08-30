@@ -73,21 +73,37 @@ public abstract class Electrodomestico {
     public String[] getAvailableColor() {
         return availableColor;
     }
+
     //Metodos
-    private char comprobarConsumoEnergetico( char letra){
-      char resultado = letra;
+    private char comprobarConsumoEnergetico(char letra) {
+        char resultado = letra;
         byte index = -1;
-       
-       for(byte i = 0; i < this.availableConsumptionEnergy.length; i++){
-           if(letra == this.availableConsumptionEnergy[i]){
-               index = i;
-               break;
-           }
-       }
-       
-       if(index < 0) {
-           resultado = Electrodomestico.DEFAULT_CONSUMO_ENERGETICO;
-       }
-       return resultado;
+
+        for (byte i = 0; i < this.availableConsumptionEnergy.length; i++) {
+            if (letra == this.availableConsumptionEnergy[i]) {
+                index = i;
+                break;
+            }
+        }
+
+        if (index < 0) {
+            resultado = Electrodomestico.DEFAULT_CONSUMO_ENERGETICO;
+        }
+        return resultado;
+    }
+
+    private String comprobarColores(String color) {
+        String resultado = color.toLowerCase();
+        byte index = -1;
+        for (byte i = 0; i < this.availableColor.length; i++) {
+            if (color.equalsIgnoreCase(this.availableColor[i])) {
+                index = i;
+                break;
+            }
+        }
+        if (index < 0) {
+            resultado = Electrodomestico.DEFAULT_COLOR;
+        }
+        return resultado;
     }
 }
