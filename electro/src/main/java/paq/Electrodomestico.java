@@ -44,8 +44,8 @@ public abstract class Electrodomestico {
 
     public Electrodomestico(float precioBase, String color, char consumoEnergetico, float peso) {
         this.precioBase = precioBase;
-        this.color = color;
-        this.consumoEnergetico = consumoEnergetico;
+        this.color = this.comprobarColores(color);
+        this.consumoEnergetico = this.comprobarConsumoEnergetico(consumoEnergetico);
         this.peso = peso;
     }
     //Getters
