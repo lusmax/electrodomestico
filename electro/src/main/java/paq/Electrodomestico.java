@@ -106,4 +106,38 @@ public abstract class Electrodomestico {
         }
         return resultado;
     }
+
+    public float precioFinal() {
+        float precioFinal = this.precioBase;
+        char consumo = this.consumoEnergetico;
+        float tamano = this.peso;
+
+        //Incrementa precio según el consumo
+        switch (consumo) {
+            case 'A' ->
+                precioFinal += 100;
+            case 'B' ->
+                precioFinal += 80;
+            case 'C' ->
+                precioFinal += 60;
+            case 'D' ->
+                precioFinal += 50;
+            case 'E' ->
+                precioFinal += 30;
+            default ->
+                precioFinal += 10;
+        }
+
+        //Incrementa el precio según el tamaño
+        if (tamano <= 19) {
+            precioFinal += 10;
+        } else if (tamano <= 49) {
+            precioFinal += 50;
+        }else if (tamano <= 79) {
+            precioFinal += 80;
+        } else {
+            precioFinal += 100;
+        }
+        return precioFinal;
+    }
 }
