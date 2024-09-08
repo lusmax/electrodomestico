@@ -17,7 +17,7 @@ public class Lavadora extends Electrodomestico {
         this.carga = Lavadora.DEFAULT_CARGA;
     }
 
-    public Lavadora(float precio, int peso) {
+    public Lavadora(float precio, float peso) {
         super(precio, peso);
         this.carga = Lavadora.DEFAULT_CARGA;
     }
@@ -25,5 +25,10 @@ public class Lavadora extends Electrodomestico {
         super();
         this.carga = carga;
     }
+
+    public int getCarga() {
+        return carga;
+    }
+    
 
 }
