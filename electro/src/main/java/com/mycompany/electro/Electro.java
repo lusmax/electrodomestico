@@ -1,8 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.electro;
+import paq.*;
 
 /**
  *
@@ -11,6 +8,8 @@ package com.mycompany.electro;
 public class Electro {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Electrodomestico MisElectrodomesticos[] = new Electrodomestico[6];
+       
+        
     }
 }
