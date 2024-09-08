@@ -108,10 +108,10 @@ public abstract class Electrodomestico {
     }
 
     public static float precioFinal() {
-        float precioFinal = this.precioBase;
-        char consumo = this.consumoEnergetico;
-        float tamano = this.peso;
-
+        float static precioFinal = this.precioBase;
+        char static consumo = this.consumoEnergetico;
+        float static tamano = this.peso;
+ 
         //Incrementa precio según el consumo
         switch (consumo) {
             case 'A' ->
