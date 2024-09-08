@@ -28,6 +28,11 @@ public class Electro {
         misElectrodomesticos[3] = miTelevision1;
         misElectrodomesticos[4] = miTelevision2;
         misElectrodomesticos[5] = miTelevision3;
+        
+        //Recorrer array misElectrodomesticos
+        for(Electrodomestico electro : misElectrodomesticos){
+            System.out.println(electro.precioFinal());
+        }
 
     }
 }
